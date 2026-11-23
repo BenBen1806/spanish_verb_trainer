@@ -138,7 +138,6 @@ function toggleTense(tenseId) {
     }
     renderTensesFilter();
     saveSRSData();
-    generateNextQuestion();
 }
 
 function selectAllTenses(selectAll) {
@@ -149,7 +148,6 @@ function selectAllTenses(selectAll) {
     }
     renderTensesFilter();
     saveSRSData();
-    generateNextQuestion();
 }
 
 function switchMode(newMode) {
