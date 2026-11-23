@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#C60B1E">
+    <title>Spanish Verb Trainer | אימון הטיות פעלים בספרדית</title>
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        spanish: {
+                            red: '#C60B1E',
+                            yellow: '#FFC400',
+                            gold: '#D4AF37',
+                            dark: '#1E1B18',
+                            card: '#2A2622'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Rubik', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts & Font Awesome icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rubik:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Rubik', 'Inter', sans-serif;
+        }
+        .spanish-text {
+            font-family: 'Inter', sans-serif;
+            direction: ltr;
+            display: inline-block;
+        }
+        .dir-ltr {
+            direction: ltr;
+        }
+        /* Custom scrollbars */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 9999px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #475569;
+        }
+    </style>
+</head>
+<body class="bg-amber-50/50 dark:bg-stone-900 text-stone-800 dark:text-stone-100 min-h-full flex flex-col transition-colors duration-200">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 bg-white/90 dark:bg-stone-950/90 backdrop-blur border-b border-stone-200 dark:border-stone-800 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-3">
+            
+            <!-- Brand -->
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-red-600 flex items-center justify-center text-white shadow-md font-bold text-xl">
+                    ES
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold leading-tight text-stone-900 dark:text-white flex items-center gap-2">
+                        <span>מאמן פעלים בספרדית</span>
+                        <span class="text-xs px-2 py-0.5 rounded-full bg-red-100 dark:bg-red-950/60 text-red-600 dark:text-red-400 font-normal border border-red-200 dark:border-red-800">Verb Trainer</span>
+                    </h1>
+                    <p class="text-xs text-stone-500 dark:text-stone-400">תרגול הטיות ממוקד לפי פעלים, גופים וזמנים</p>
+                </div>
+            </div>
+
+            <!-- Stats Bar Header -->
+            <div class="flex items-center gap-4 bg-stone-100 dark:bg-stone-800 px-3 py-1.5 rounded-xl text-xs font-medium">
+                <div class="flex items-center gap-1.5 text-amber-600 dark:text-amber-400" title="רצף תשובות נכונות">
+                    <i class="fa-solid fa-fire text-sm"></i>
+                    <span>רצף: <strong id="header-streak">0</strong></span>
+                </div>
+                <div class="h-3 w-[1px] bg-stone-300 dark:bg-stone-700"></div>
+                <div class="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400" title="אחוז דיוק">
+                    <i class="fa-solid fa-chart-line text-sm"></i>
+                    <span>דיוק: <strong id="header-accuracy">100%</strong></span>
+                </div>
+                <div class="h-3 w-[1px] bg-stone-300 dark:bg-stone-700"></div>
+                <div class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400" title="סה״כ תרגולים">
+                    <i class="fa-solid fa-check-double text-sm"></i>
+                    <span>תורגל: <strong id="header-total">0</strong></span>
+                </div>
+            </div>
+
+            <!-- Mode Tabs & Controls -->
+            <div class="flex items-center gap-2">
+                <!-- Navigation Tabs -->
+                <nav class="flex bg-stone-100 dark:bg-stone-800 p-1 rounded-xl text-xs font-medium">
+                    <button id="tab-practice" onclick="switchMode('practice')" class="px-3 py-1.5 rounded-lg transition-all bg-white dark:bg-stone-700 text-stone-900 dark:text-white shadow-sm">
+                        <i class="fa-solid fa-pen-to-square ml-1"></i>אימון
+                    </button>
+                    <button id="tab-library" onclick="switchMode('library')" class="px-3 py-1.5 rounded-lg transition-all text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white">
+                        <i class="fa-solid fa-book-open ml-1"></i>מאגר פעלים
+                    </button>
+                    <button id="tab-weak" onclick="switchMode('weak')" class="px-3 py-1.5 rounded-lg transition-all text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white relative">
+                        <i class="fa-solid fa-triangle-exclamation ml-1 text-amber-500"></i>פעלים חלשים
+                        <span id="weak-badge" class="hidden absolute -top-1 -right-1 bg-red-500 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
+                    </button>
+                </nav>
+
+                <!-- Dark Mode Toggle -->
+                <button onclick="toggleDarkMode()" class="p-2 rounded-xl text-stone-600 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800 transition" title="שנה מצב תאורה">
+                    <i id="theme-icon" class="fa-solid fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-6xl mx-auto px-4 py-6 flex-1 w-full">
+
+        <!-- =================================================== -->
+        <!-- MODE 1: PRACTICE MODE -->
+        <!-- =================================================== -->
+        <div id="mode-practice" class="space-y-6">
+
+            <!-- Tense Selector Filter Card -->
+            <div class="bg-white dark:bg-stone-800/90 rounded-2xl p-4 border border-stone-200 dark:border-stone-700/80 shadow-sm">
+                <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-sliders text-amber-600 dark:text-amber-400"></i>
+                        <h2 class="font-bold text-sm text-stone-800 dark:text-stone-200">בחירת זמנים לתרגול (Tenses Filter)</h2>
+                        <span id="weak-mode-indicator" class="hidden px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-red-100 dark:bg-red-950 text-red-700 dark:text-red-300 border border-red-200 dark:border-red-800">
+                            מצב תרגול פעלים חלשים פעיל
+                            <button type="button" onclick="exitWeakMode()" class="mr-1.5 underline hover:no-underline">בטל</button>
+                        </span>
+                    </div>
+                    <div class="flex items-center gap-2 text-xs">
+                        <button type="button" onclick="selectAllTenses(true)" class="text-amber-600 dark:text-amber-400 hover:underline">בחר הכל</button>
+                        <span class="text-stone-300 dark:text-stone-600">|</span>
+                        <button type="button" onclick="selectAllTenses(false)" class="text-stone-500 hover:underline">נקה הכל</button>
+                    </div>
+                </div>
+
+                <!-- Tenses Chips Grid -->
+                <div id="tenses-grid" class="flex flex-wrap gap-2 text-xs">
+                    <!-- Dynamic rendering of tenses checkboxes -->
+                </div>
+            </div>
+
+            <!-- Quiz Card -->
+            <div class="bg-white dark:bg-stone-800 rounded-3xl border border-stone-200 dark:border-stone-700/80 shadow-lg p-6 md:p-8 relative overflow-hidden transition-all">
+                
+                <!-- Progress bar top of card -->
+                <div class="absolute top-0 right-0 left-0 h-1 bg-stone-100 dark:bg-stone-700">
+                    <div id="practice-progress-bar" class="h-full bg-gradient-to-l from-amber-500 to-red-500 w-0 transition-all duration-300"></div>
+                </div>
+
+                <!-- Question Header Badges -->
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-6">
+                    <div class="flex items-center gap-2">
+                        <span id="badge-tense" class="px-3 py-1 rounded-full text-xs font-bold bg-amber-100 dark:bg-amber-950/80 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-700">
+                            Presente
+                        </span>
+                        <span id="badge-category" class="px-3 py-1 rounded-full text-xs font-medium bg-stone-100 dark:bg-stone-700 text-stone-600 dark:text-stone-300">
+                            פועל סדיר (-ar)
+                        </span>
+                    </div>
+
+                    <button type="button" onclick="speakTargetVerb()" class="text-stone-500 hover:text-amber-600 dark:text-stone-400 dark:hover:text-amber-400 text-sm font-medium flex items-center gap-1.5 transition px-2.5 py-1 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-700">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <span>השמע פועל</span>
+                    </button>
+                </div>
+
+                <!-- Focused Verb & Pronoun Conjugation Prompt -->
+                <div class="bg-stone-50 dark:bg-stone-900/80 rounded-2xl p-6 md:p-8 mb-6 border border-stone-200/80 dark:border-stone-700/60 text-center space-y-5">
+                    <!-- Infinitive & Meaning -->
+                    <div>
+                        <div class="text-xs font-medium text-stone-400 dark:text-stone-500 mb-1">הטה את הפועל (Infinitive)</div>
+                        <div class="flex flex-wrap items-center justify-center gap-3">
+                            <span id="target-infinitive" class="spanish-text text-4xl md:text-5xl font-extrabold text-stone-900 dark:text-white tracking-wide">hablar</span>
+                            <span class="text-stone-300 dark:text-stone-600 text-2xl">•</span>
+                            <span id="target-translation" class="text-2xl md:text-3xl font-bold text-amber-600 dark:text-amber-400">לדבר</span>
+                        </div>
+                    </div>
+
+                    <!-- Divider -->
+                    <div class="w-24 h-[1px] bg-stone-200 dark:bg-stone-700 mx-auto"></div>
+
+                    <!-- Target Pronoun & Tense Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-lg mx-auto">
+                        <div class="bg-white dark:bg-stone-800 rounded-xl p-3.5 border border-blue-200 dark:border-blue-900/60 shadow-sm">
+                            <div class="text-[11px] font-medium text-stone-400 dark:text-stone-500 mb-0.5">גוף להטיה (Pronombre)</div>
+                            <div id="prompt-subject-es" class="spanish-text text-xl md:text-2xl font-extrabold text-blue-600 dark:text-blue-400">Yo</div>
+                            <div id="prompt-subject-he" class="text-xs font-medium text-stone-500 dark:text-stone-400">אני</div>
+                        </div>
+
+                        <div class="bg-white dark:bg-stone-800 rounded-xl p-3.5 border border-amber-200 dark:border-amber-900/60 shadow-sm">
+                            <div class="text-[11px] font-medium text-stone-400 dark:text-stone-500 mb-0.5">זמן דקדוקי (Tiempo)</div>
+                            <div id="prompt-tense-he" class="text-base md:text-lg font-extrabold text-amber-700 dark:text-amber-300 mt-1">הווה (Presente)</div>
+                            <div id="prompt-tense-es" class="spanish-text text-[11px] text-stone-400">Presente de Indicativo</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grammar Hint Accordion -->
+                <div class="mb-6">
+                    <button type="button" onclick="toggleGrammarHint()" class="text-xs text-amber-600 dark:text-amber-400 hover:underline flex items-center gap-1.5 font-medium mx-auto">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <span id="hint-toggle-text">הצג רמז דקדוקי</span>
+                    </button>
+                    <div id="grammar-hint-box" class="hidden mt-2 p-3 bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/60 rounded-xl text-xs text-amber-900 dark:text-amber-200 text-center">
+                        <!-- Hint text injected dynamically -->
+                    </div>
+                </div>
+
+                <!-- Accent Keys Virtual Keyboard -->
+                <div class="mb-6">
+                    <div class="text-[11px] font-medium text-stone-400 dark:text-stone-500 text-center mb-1.5">מקלדת אקצנטים מהירה (לחץ להוספת אות):</div>
+                    <div class="flex flex-wrap items-center justify-center gap-1.5 dir-ltr">
+                        <button type="button" onclick="insertAccent('á')" class="w-9 h-9 rounded-xl bg-stone-100 dark:bg-stone-700 hover:bg-amber-500 hover:text-white dark:hover:bg-amber-500 font-semibold text-stone-700 dark:text-stone-200 shadow-sm transition text-base">á</button>
+                        <button type="button" onclick="insertAccent('é')" class="w-9 h-9 rounded-xl bg-stone-100 dark:bg-stone-700 hover:bg-amber-500 hover:text-white dark:hover:bg-amber-500 font-semibold text-stone-700 dark:text-stone-200 shadow-sm transition text-base">é</button>
+                        <button type="button" onclick="insertAccent('í')" class="w-9 h-9 rounded-xl bg-stone-100 dark:bg-stone-700 hover:bg-amber-500 hover:text-white dark:hover:bg-amber-500 font-semibold text-stone-700 dark:text-stone-200 shadow-sm transition text-base">í</button>
+                        <button type="button" onclick="insertAccent('ó')" class="w-9 h-9 rounded-xl bg-stone-100 dark:bg-stone-700 hover:bg-amber-500 hover:text-white dark:hover:bg-amber-500 font-semibold text-stone-700 dark:text-stone-200 shadow-sm transition text-base">ó</button>
+                        <button type="button" onclick="insertAccent('ú')" class="w-9 h-9 rounded-xl bg-stone-100 dark:bg-stone-700 hover:bg-amber-500 hover:text-white dark:hover:bg-amber-500 font-semibold text-stone-700 dark:text-stone-200 shadow-sm transition text-base">ú</button>
+                        <button type="button" onclick="insertAccent('ñ')" class="w-9 h-9 rounded-xl bg-stone-100 dark:bg-stone-700 hover:bg-amber-500 hover:text-white dark:hover:bg-amber-500 font-semibold text-stone-700 dark:text-stone-200 shadow-sm transition text-base">ñ</button>
+                        <button type="button" onclick="insertAccent('¡')" class="w-9 h-9 rounded-xl bg-stone-100 dark:bg-stone-700 hover:bg-amber-500 hover:text-white dark:hover:bg-amber-500 font-semibold text-stone-700 dark:text-stone-200 shadow-sm transition text-base">¡</button>
+                        <button type="button" onclick="insertAccent('¿')" class="w-9 h-9 rounded-xl bg-stone-100 dark:bg-stone-700 hover:bg-amber-500 hover:text-white dark:hover:bg-amber-500 font-semibold text-stone-700 dark:text-stone-200 shadow-sm transition text-base">¿</button>
+                    </div>
+                </div>
+
+                <!-- Input & Action Buttons -->
+                <div class="max-w-md mx-auto space-y-4">
+                    <div class="relative dir-ltr">
+                        <input type="text" id="user-input" autocomplete="off" spellcheck="false" placeholder="Escribe la conjugación..." 
+                            class="w-full px-5 py-3.5 rounded-2xl border-2 border-stone-300 dark:border-stone-600 bg-white dark:bg-stone-900 text-stone-900 dark:text-white font-semibold text-xl text-center focus:border-amber-500 dark:focus:border-amber-400 focus:outline-none transition shadow-inner">
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <button type="button" id="btn-check" onclick="checkAnswer()" class="flex-1 py-3.5 px-6 rounded-2xl bg-gradient-to-r from-amber-500 to-red-600 hover:from-amber-600 hover:to-red-700 text-white font-bold text-base shadow-lg shadow-amber-500/20 active:scale-[0.99] transition">
+                            <i class="fa-solid fa-check ml-2"></i>בדוק תשובה (Enter)
+                        </button>
+                        <button type="button" id="btn-next" onclick="generateNextQuestion()" class="hidden flex-1 py-3.5 px-6 rounded-2xl bg-stone-900 dark:bg-stone-100 hover:bg-stone-800 dark:hover:bg-white text-white dark:text-stone-900 font-bold text-base shadow-lg active:scale-[0.99] transition">
+                            הפועל הבא <i class="fa-solid fa-arrow-left mr-2"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Real-time Feedback Banner -->
+                <div id="feedback-card" class="hidden mt-6 p-4 rounded-2xl border transition-all text-sm">
+                    <!-- Dynamic Feedback Injected Here -->
+                </div>
+
+            </div>
+        </div>
+
+        <!-- =================================================== -->
+        <!-- MODE 2: VERB LIBRARY & CONJUGATION TABLES MODE -->
+        <!-- =================================================== -->
+        <div id="mode-library" class="hidden space-y-6">
+            <div class="bg-white dark:bg-stone-800 rounded-2xl p-6 border border-stone-200 dark:border-stone-700/80 shadow-sm">
+                
+                <div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 mb-6">
+                    <div>
+                        <h2 class="text-xl font-bold text-stone-900 dark:text-white flex items-center gap-2">
+                            <i class="fa-solid fa-book text-amber-500"></i>
+                            <span>ספריית הפעלים וטבלאות הנטייה</span>
+                        </h2>
+                        <p class="text-xs text-stone-500 dark:text-stone-400">חפש פועל וצפה בכל ההטיות שלו על פני 7 זמנים דקדוקיים</p>
+                    </div>
+
+                    <!-- Search Input -->
+                    <div class="relative min-w-[260px]">
+                        <input type="text" id="library-search" oninput="filterLibraryVerbs()" placeholder="חפש פועל בספרדית או בעברית..."
+                            class="w-full pl-4 pr-10 py-2.5 rounded-xl border border-stone-300 dark:border-stone-600 bg-stone-50 dark:bg-stone-900 text-stone-900 dark:text-white text-sm focus:outline-none focus:border-amber-500">
+                        <i class="fa-solid fa-magnifying-glass absolute right-3 top-3 text-stone-400"></i>
+                    </div>
+                </div>
+
+                <!-- Verb Selection Grid -->
+                <div id="library-verb-chips" class="flex flex-wrap gap-2 max-h-40 overflow-y-auto p-1 mb-6 border-b border-stone-200 dark:border-stone-700 pb-4">
+                    <!-- Dynamic Verb Badges -->
+                </div>
+
+                <!-- Conjugation Details Display Card -->
+                <div id="library-detail-card" class="bg-stone-50 dark:bg-stone-900/90 rounded-2xl p-5 border border-stone-200 dark:border-stone-700/80">
+                    <div class="flex flex-wrap items-center justify-between gap-3 mb-4 pb-4 border-b border-stone-200 dark:border-stone-800">
+                        <div>
+                            <div class="flex items-center gap-3">
+                                <span id="lib-selected-infinitive" class="spanish-text text-2xl font-bold text-stone-900 dark:text-white">hablar</span>
+                                <span id="lib-selected-hebrew" class="text-lg font-bold text-amber-600 dark:text-amber-400">לדבר</span>
+                            </div>
+                            <div id="lib-selected-tags" class="flex gap-2 mt-1">
+                                <!-- Category badge -->
+                            </div>
+                        </div>
+
+                        <!-- Tense Switcher Tabs inside Library -->
+                        <div id="lib-tense-tabs" class="flex flex-wrap gap-1 text-xs">
+                            <!-- Dynamic Tense Tab Buttons -->
+                        </div>
+                    </div>
+
+                    <!-- 6 Persons Conjugation Table Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3" id="lib-conjugations-grid">
+                        <!-- Table items injected dynamically -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- =================================================== -->
+        <!-- MODE 3: WEAK VERBS / SRS ANALYTICS MODE -->
+        <!-- =================================================== -->
+        <div id="mode-weak" class="hidden space-y-6">
+            <div class="bg-white dark:bg-stone-800 rounded-2xl p-6 border border-stone-200 dark:border-stone-700/80 shadow-sm">
+                
+                <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+                    <div>
+                        <h2 class="text-xl font-bold text-stone-900 dark:text-white flex items-center gap-2">
+                            <i class="fa-solid fa-triangle-exclamation text-amber-500"></i>
+                            <span>אזור פעלים חלשים וסטטיסטיקת שגיאות</span>
+                        </h2>
+                        <p class="text-xs text-stone-500 dark:text-stone-400">האלגוריתם מזהה פעלים שבהם טעית בתרגול ומאפשר תרגול ממוקד</p>
+                    </div>
+
+                    <div class="flex gap-2">
+                        <button type="button" onclick="startWeakVerbsPractice()" id="btn-start-weak-practice" class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs shadow transition">
+                            <i class="fa-solid fa-play ml-1"></i>התחל תרגול ממוקד
+                        </button>
+                        <button type="button" onclick="resetSRSProgress()" id="btn-reset-srs" class="px-3 py-2 rounded-xl bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-300 hover:bg-red-500 hover:text-white transition text-xs font-medium">
+                            איפוס נתונים
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Weak Verbs List Table -->
+                <div id="weak-verbs-container" class="space-y-3">
+                    <!-- Dynamic rendering of weak verbs cards -->
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-stone-950 border-t border-stone-200 dark:border-stone-800 py-4 mt-auto text-center text-xs text-stone-500 dark:text-stone-400">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
+            <div>
+                <span>Spanish Verb Trainer &copy; 2026 | אימון פעלים בספרדית</span>
+            </div>
+            <div class="flex gap-4">
+                <span>7 זמנים דקדוקיים</span>
+                <span>•</span>
+                <span>תרגול אדפטיבי (SRS)</span>
+                <span>•</span>
+                <span>כללי דקדוק מקיפים</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External Application Logic -->
+    <script src="app.js"></script>
+</body>
+</html>

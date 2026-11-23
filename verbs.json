@@ -1,0 +1,486 @@
+[
+  {
+    "id": "hablar",
+    "infinitive": "hablar",
+    "hebrew": "לדבר",
+    "category": "regular-ar",
+    "categoryName": "פועל סדיר (-ar)",
+    "conjugations": {
+      "presente": ["hablo", "hablas", "habla", "hablamos", "habláis", "hablan"],
+      "indefinido": ["hablé", "hablaste", "habló", "hablamos", "hablasteis", "hablaron"],
+      "perfecto": ["he hablado", "has hablado", "ha hablado", "hemos hablado", "habéis hablado", "han hablado"],
+      "imperfecto": ["hablaba", "hablabas", "hablaba", "hablábamos", "hablabais", "hablaban"],
+      "futuro": ["hablaré", "hablarás", "hablará", "hablaremos", "hablaréis", "hablarán"],
+      "subjuntivo": ["hable", "hables", "hable", "hablemos", "habléis", "hablen"],
+      "imperativo": ["-", "habla", "hable", "hablemos", "hablad", "hablen"]
+    },
+    "templates": [
+      { "tense": "presente", "subjectIdx": 0, "textEs": "Todos los días yo {slot} español con mi profesor.", "textHe": "כל יום אני מדבר ספרדית עם המורה שלי." },
+      { "tense": "indefinido", "subjectIdx": 2, "textEs": "Ayer ella {slot} con el director de la empresa.", "textHe": "אתמול היא דיברה עם מנהל החברה." },
+      { "tense": "perfecto", "subjectIdx": 3, "textEs": "Hoy nosotros {slot} de este problema.", "textHe": "היום דיברנו על הבעיה הזו." },
+      { "tense": "futuro", "subjectIdx": 1, "textEs": "Mañana tú {slot} por teléfono con tu madre.", "textHe": "מחר אתה תדבר בטלפון עם אמא שלך." }
+    ]
+  },
+  {
+    "id": "comer",
+    "infinitive": "comer",
+    "hebrew": "לאכול",
+    "category": "regular-er",
+    "categoryName": "פועל סדיר (-er)",
+    "conjugations": {
+      "presente": ["como", "comes", "come", "comemos", "coméis", "comen"],
+      "indefinido": ["comí", "comiste", "comió", "comimos", "comisteis", "comieron"],
+      "perfecto": ["he comido", "has comido", "ha comido", "hemos comido", "habéis comido", "han comido"],
+      "imperfecto": ["comía", "comías", "comía", "comíamos", "comíais", "comían"],
+      "futuro": ["comeré", "comerás", "comerá", "comeremos", "comeréis", "comerán"],
+      "subjuntivo": ["coma", "comas", "coma", "comamos", "comáis", "coman"],
+      "imperativo": ["-", "come", "coma", "comamos", "comed", "coman"]
+    },
+    "templates": [
+      { "tense": "presente", "subjectIdx": 1, "textEs": "¿A qué hora {slot} tú el almuerzo normalmente?", "textHe": "באיזו שעה אתה אוכל צהריים בדרך כלל?" },
+      { "tense": "indefinido", "subjectIdx": 0, "textEs": "Ayer yo {slot} una paella deliciosa en Valencia.", "textHe": "אתמול אכלתי פאאייה טעימה בוולנסיה." },
+      { "tense": "perfecto", "subjectIdx": 5, "textEs": "Ellos ya {slot} todo el pastel de chocolate.", "textHe": "הם כבר אכלו את כל עוגת השוקולד." }
+    ]
+  },
+  {
+    "id": "vivir",
+    "infinitive": "vivir",
+    "hebrew": "לגור / לחיות",
+    "category": "regular-ir",
+    "categoryName": "פועל סדיר (-ir)",
+    "conjugations": {
+      "presente": ["vivo", "vives", "vive", "vivimos", "vivís", "viven"],
+      "indefinido": ["viví", "viviste", "vivió", "vivimos", "vivisteis", "vivieron"],
+      "perfecto": ["he vivido", "has vivido", "ha vivido", "hemos vivido", "habéis vivido", "han vivido"],
+      "imperfecto": ["vivía", "vivías", "vivía", "vivíamos", "vivíais", "vivían"],
+      "futuro": ["viviré", "vivirás", "vivirá", "viviremos", "viviréis", "vivirán"],
+      "subjuntivo": ["viva", "vivas", "viva", "vivamos", "viváis", "vivan"],
+      "imperativo": ["-", "vive", "viva", "vivamos", "vivid", "vivan"]
+    },
+    "templates": [
+      { "tense": "presente", "subjectIdx": 3, "textEs": "Ahora nosotros {slot} en el centro de Madrid.", "textHe": "עכשיו אנחנו גרים במרכז מדריד." },
+      { "tense": "indefinido", "subjectIdx": 0, "textEs": "El año pasado yo {slot} en Barcelona por seis meses.", "textHe": "בשנה שעברה גרתי בברצלונה במשך שישה חודשים." },
+      { "tense": "imperfecto", "subjectIdx": 2, "textEs": "Cuando era joven, mi abuelo {slot} en el campo.", "textHe": "כשהיה צעיר, סבא שלי גר בכפר." }
+    ]
+  },
+  {
+    "id": "ser",
+    "infinitive": "ser",
+    "hebrew": "להיות (מהות, זהות, מקצוע)",
+    "category": "irregular",
+    "categoryName": "פועל לא סדיר",
+    "conjugations": {
+      "presente": ["soy", "eres", "es", "somos", "sois", "son"],
+      "indefinido": ["fui", "fuiste", "fue", "fuimos", "fuisteis", "fueron"],
+      "perfecto": ["he sido", "has sido", "ha sido", "hemos sido", "habéis sido", "han sido"],
+      "imperfecto": ["era", "eras", "era", "éramos", "erais", "eran"],
+      "futuro": ["seré", "serás", "será", "seremos", "seréis", "serán"],
+      "subjuntivo": ["sea", "seas", "sea", "seamos", "seáis", "sean"],
+      "imperativo": ["-", "sé", "sea", "seamos", "sed", "sean"]
+    },
+    "templates": [
+      { "tense": "presente", "subjectIdx": 0, "textEs": "Yo {slot} médico y trabajo en un hospital grande.", "textHe": "אני רופא ואני עובד בבית חולים גדול." },
+      { "tense": "indefinido", "subjectIdx": 2, "textEs": "La fiesta de cumpleaños {slot} muy divertida anoche.", "textHe": "מסיבת יום ההולדת הייתה מאוד מהנה אמש." },
+      { "tense": "imperfecto", "subjectIdx": 3, "textEs": "Cuando {slot} niños, jugábamos siempre en el parque.", "textHe": "כשהיינו ילדים, שיחקנו תמיד בפארק." }
+    ]
+  },
+  {
+    "id": "estar",
+    "infinitive": "estar",
+    "hebrew": "להיות (מיקום, מצב זמני)",
+    "category": "irregular",
+    "categoryName": "פועל לא סדיר",
+    "conjugations": {
+      "presente": ["estoy", "estás", "está", "estamos", "estáis", "están"],
+      "indefinido": ["estuve", "estuviste", "estuvo", "estuvimos", "estuvisteis", "estuvieron"],
+      "perfecto": ["he estado", "has estado", "ha estado", "hemos estado", "habéis estado", "han estado"],
+      "imperfecto": ["estaba", "estabas", "estaba", "estábamos", "estabais", "estaban"],
+      "futuro": ["estaré", "estarás", "estará", "estaremos", "estaréis", "estarán"],
+      "subjuntivo": ["esté", "estés", "esté", "estemos", "estéis", "estén"],
+      "imperativo": ["-", "está", "esté", "estemos", "estad", "estén"]
+    },
+    "templates": [
+      { "tense": "presente", "subjectIdx": 0, "textEs": "Hoy yo {slot} muy cansado por el trabajo.", "textHe": "היום אני מאוד עייף מהעבודה." },
+      { "tense": "indefinido", "subjectIdx": 3, "textEs": "Ayer nosotros {slot} en la playa todo el día.", "textHe": "אתמול היינו בים כל היום." },
+      { "tense": "futuro", "subjectIdx": 2, "textEs": "¿Dónde {slot} Juan mañana por la tarde?", "textHe": "איפה חואן יהיה מחר אחה\"צ?" }
+    ]
+  },
+  {
+    "id": "ir",
+    "infinitive": "ir",
+    "hebrew": "ללכת / לנסוע",
+    "category": "irregular",
+    "categoryName": "פועל לא סדיר",
+    "conjugations": {
+      "presente": ["voy", "vas", "va", "vamos", "vais", "van"],
+      "indefinido": ["fui", "fuiste", "fue", "fuimos", "fuisteis", "fueron"],
+      "perfecto": ["he ido", "has ido", "ha ido", "hemos ido", "habéis ido", "han ido"],
+      "imperfecto": ["iba", "ibas", "iba", "íbamos", "ibais", "iban"],
+      "futuro": ["iré", "irás", "irá", "iremos", "iréis", "irán"],
+      "subjuntivo": ["vaya", "vayas", "vaya", "vayamos", "vayáis", "vayan"],
+      "imperativo": ["-", "ve", "vaya", "vamos", "id", "vayan"]
+    },
+    "templates": [
+      { "tense": "presente", "subjectIdx": 0, "textEs": "Ahora yo {slot} al supermercado a comprar pan.", "textHe": "עכשיו אני הולך לסופרמרקט לקנות לחם." },
+      { "tense": "indefinido", "subjectIdx": 1, "textEs": "¿Adónde {slot} tú la semana pasada de vacaciones?", "textHe": "לאן נסעת בשבוע שעבר בחופשה?" },
+      { "tense": "subjuntivo", "subjectIdx": 2, "textEs": "Quiero que María {slot} al médico pronto.", "textHe": "אני רוצה שמריה תלך לרופא בהקדם." }
+    ]
+  },
+  {
+    "id": "hacer",
+    "infinitive": "hacer",
+    "hebrew": "לעשות / להכין",
+    "category": "irregular",
+    "categoryName": "גזע משתנה / לא סדיר",
+    "conjugations": {
+      "presente": ["hago", "haces", "hace", "hacemos", "hacéis", "hacen"],
+      "indefinido": ["hice", "hiciste", "hizo", "hicimos", "hicisteis", "hicieron"],
+      "perfecto": ["he hecho", "has hecho", "ha hecho", "hemos hecho", "habéis hecho", "han hecho"],
+      "imperfecto": ["hacía", "hacías", "hacía", "hacíamos", "hacíais", "hacían"],
+      "futuro": ["haré", "harás", "hará", "haremos", "haréis", "harán"],
+      "subjuntivo": ["haga", "hagas", "haga", "hagamos", "hagáis", "hagan"],
+      "imperativo": ["-", "haz", "haga", "hagamos", "haced", "hagan"]
+    },
+    "templates": [
+      { "tense": "indefinido", "subjectIdx": 0, "textEs": "Ayer yo {slot} toda la tarea de español.", "textHe": "אתמול עשיתי את כל שיעורי הבית בספרדית." },
+      { "tense": "perfecto", "subjectIdx": 1, "textEs": "¿Qué {slot} tú hoy por la mañana?", "textHe": "מה עשית היום בבוקר?" },
+      { "tense": "futuro", "subjectIdx": 3, "textEs": "Mañana nosotros {slot} una cena especial.", "textHe": "מחר אנחנו נכין ארוחת ערב מיוחדת." },
+      { "tense": "imperativo", "subjectIdx": 1, "textEs": "¡{slot} tu trabajo con cuidado!", "textHe": "עשה את עבודתך בזהירות!" }
+    ]
+  },
+  {
+    "id": "tener",
+    "infinitive": "tener",
+    "hebrew": "להיות ל- / להחזיק",
+    "category": "irregular",
+    "categoryName": "גזע משתנה / לא סדיר",
+    "conjugations": {
+      "presente": ["tengo", "tienes", "tiene", "tenemos", "tenéis", "tienen"],
+      "indefinido": ["tuve", "tuviste", "tuvo", "tuvimos", "tuvisteis", "tuvieron"],
+      "perfecto": ["he tenido", "has tenido", "ha tenido", "hemos tenido", "habéis tenido", "han tenido"],
+      "imperfecto": ["tenía", "tenías", "tenía", "teníamos", "teníais", "tenían"],
+      "futuro": ["tendré", "tendrás", "tendrá", "tendremos", "tendréis", "tendrán"],
+      "subjuntivo": ["tenga", "tengas", "tenga", "tengamos", "tengáis", "tengan"],
+      "imperativo": ["-", "ten", "tenga", "tengamos", "tened", "tengan"]
+    },
+    "templates": [
+      { "tense": "presente", "subjectIdx": 0, "textEs": "Yo {slot} dos hermanos y una hermana.", "textHe": "יש לי שני אחים ואחות אחת." },
+      { "tense": "indefinido", "subjectIdx": 2, "textEs": "El año pasado Carlos {slot} un accidente con la bici.", "textHe": "בשנה שעברה לקרלוס הייתה תאונה עם האופניים." },
+      { "tense": "futuro", "subjectIdx": 3, "textEs": "Pronto nosotros {slot} más información sobre el examen.", "textHe": "בקרוב יהיה לנו עוד מידע על המבחן." }
+    ]
+  },
+  {
+    "id": "poder",
+    "infinitive": "poder",
+    "hebrew": "לוכל / להיות מסוגל",
+    "category": "irregular",
+    "categoryName": "פועל עם שינוי תנועה (o->ue)",
+    "conjugations": {
+      "presente": ["puedo", "puedes", "puede", "podemos", "podéis", "pueden"],
+      "indefinido": ["pude", "pudiste", "pudo", "pudimos", "pudisteis", "pudieron"],
+      "perfecto": ["he podido", "has podido", "ha podido", "hemos podido", "habéis podido", "han podido"],
+      "imperfecto": ["podía", "podías", "podía", "podíamos", "podíais", "podían"],
+      "futuro": ["podré", "podrás", "podrá", "podremos", "podréis", "podrán"],
+      "subjuntivo": ["pueda", "puedas", "pueda", "podamos", "podáis", "puedan"],
+      "imperativo": ["-", "puede", "pueda", "podamos", "poded", "puedan"]
+    },
+    "templates": [
+      { "tense": "presente", "subjectIdx": 1, "textEs": "¿{slot} tú hablar más despacio, por favor?", "textHe": "האם אתה יכול לדבר לאט יותר, בבקשה?" },
+      { "tense": "indefinido", "subjectIdx": 0, "textEs": "Ayer yo no {slot} ir a la reunión.", "textHe": "אתמול לא יכולתי ללכת לפגישה." }
+    ]
+  },
+  {
+    "id": "decir",
+    "infinitive": "decir",
+    "hebrew": "לומר / להגיד",
+    "category": "irregular",
+    "categoryName": "פועל לא סדיר",
+    "conjugations": {
+      "presente": ["digo", "dices", "dice", "decimos", "decís", "dicen"],
+      "indefinido": ["dije", "dijiste", "dijo", "dijimos", "dijisteis", "dijeron"],
+      "perfecto": ["he dicho", "has dicho", "ha dicho", "hemos dicho", "habéis dicho", "han dicho"],
+      "imperfecto": ["decía", "decías", "decía", "decíamos", "decíais", "decían"],
+      "futuro": ["diré", "dirás", "dirá", "diremos", "diréis", "dirán"],
+      "subjuntivo": ["diga", "digas", "diga", "digamos", "digáis", "digan"],
+      "imperativo": ["-", "di", "diga", "digamos", "decid", "digan"]
+    },
+    "templates": [
+      { "tense": "indefinido", "subjectIdx": 2, "textEs": "María me {slot} la verdad sobre la situación.", "textHe": "מריה אמרה לי את האמת על המצב." },
+      { "tense": "perfecto", "subjectIdx": 0, "textEs": "Yo ya te lo {slot} tres veces.", "textHe": "כבר אמרתי לך את זה שלוש פעמים." },
+      { "tense": "imperativo", "subjectIdx": 1, "textEs": "¡{slot} la verdad ahora mismo!", "textHe": "אמור את האמת ממש עכשיו!" }
+    ]
+  },
+  {
+    "id": "querer",
+    "infinitive": "querer",
+    "hebrew": "לרצות / לאהוב",
+    "category": "irregular",
+    "categoryName": "שינוי תנועה (e->ie)",
+    "conjugations": {
+      "presente": ["quiero", "quieres", "quiere", "queremos", "queréis", "quieren"],
+      "indefinido": ["quise", "quisiste", "quiso", "quisimos", "quisisteis", "quisieron"],
+      "perfecto": ["he querido", "has querido", "ha querido", "hemos querido", "habéis querido", "han querido"],
+      "imperfecto": ["quería", "querías", "quería", "queríamos", "queríais", "querían"],
+      "futuro": ["querré", "querrás", "querrá", "querremos", "querréis", "querrán"],
+      "subjuntivo": ["quiera", "quieras", "quiera", "queramos", "queráis", "quieran"],
+      "imperativo": ["-", "quiere", "quiera", "queramos", "quered", "quieran"]
+    },
+    "templates": [
+      { "tense": "presente", "subjectIdx": 0, "textEs": "Yo {slot} aprender español para viajar.", "textHe": "אני רוצה ללמוד ספרדית כדי לנסוע." },
+      { "tense": "indefinido", "subjectIdx": 3, "textEs": "Nosotros {slot} comprar la casa, pero era muy cara.", "textHe": "רצינו לקנות את הבית, אבל הוא היה יקר מדי." }
+    ]
+  },
+  {
+    "id": "salir",
+    "infinitive": "salir",
+    "hebrew": "לצאת",
+    "category": "irregular",
+    "categoryName": "גזע משתנה בגוף ראשון",
+    "conjugations": {
+      "presente": ["salgo", "sales", "sale", "salimos", "salís", "salen"],
+      "indefinido": ["salí", "saliste", "salió", "salimos", "salisteis", "salieron"],
+      "perfecto": ["he salido", "has salido", "ha salido", "hemos salido", "habéis salido", "han salido"],
+      "imperfecto": ["salía", "salías", "salía", "salíamos", "salíais", "salían"],
+      "futuro": ["saldré", "saldrás", "saldrá", "saldremos", "saldréis", "saldrán"],
+      "subjuntivo": ["salga", "salgas", "salga", "salgamos", "salgáis", "salgan"],
+      "imperativo": ["-", "sal", "salga", "salgamos", "salid", "salgan"]
+    },
+    "templates": [
+      { "tense": "presente", "subjectIdx": 0, "textEs": "Normalmente yo {slot} de casa a las ocho.", "textHe": "בדרך כלל אני יוצא מהבית בשמונה." },
+      { "tense": "indefinido", "subjectIdx": 5, "textEs": "Anoche mis amigos {slot} a bailar.", "textHe": "אמש החברים שלי יצאו לרקוד." }
+    ]
+  },
+  {
+    "id": "levantarse",
+    "infinitive": "levantarse",
+    "hebrew": "לקום (פועל רפלקסיבי)",
+    "category": "reflexive",
+    "categoryName": "פועל רפלקסיבי (Verbo Reflexivo)",
+    "conjugations": {
+      "presente": ["me levanto", "te levantas", "se levanta", "nos levantamos", "os levantáis", "se levantan"],
+      "indefinido": ["me levanté", "te levantaste", "se levantó", "nos levantamos", "os levantasteis", "se levantaron"],
+      "perfecto": ["me he levantado", "te has levantado", "se ha levantado", "nos hemos levantado", "os habéis levantado", "se han levantado"],
+      "imperfecto": ["me levantaba", "te levantabas", "se levantaba", "nos levantábamos", "os levantabais", "se levantaban"],
+      "futuro": ["me levantaré", "te levantarás", "se levantará", "nos levantaremos", "os levantaréis", "se levantarán"],
+      "subjuntivo": ["me levante", "te levantes", "se levante", "nos levantemos", "os levantéis", "se levanten"],
+      "imperativo": ["-", "levántate", "levántese", "levantémonos", "levantaos", "levántense"]
+    },
+    "templates": [
+      { "tense": "presente", "subjectIdx": 0, "textEs": "Todos los días yo {slot} a las siete de la mañana.", "textHe": "כל יום אני קם בשבע בבוקר." },
+      { "tense": "indefinido", "subjectIdx": 2, "textEs": "Hoy Juan {slot} muy temprano.", "textHe": "היום חואן קם מאוד מוקדם." }
+    ]
+  },
+  {
+    "id": "ducharse",
+    "infinitive": "ducharse",
+    "hebrew": "להתקלח (פועל רפלקסיבי)",
+    "category": "reflexive",
+    "categoryName": "פועל רפלקסיבי (Verbo Reflexivo)",
+    "conjugations": {
+      "presente": ["me ducho", "te duchas", "se ducha", "nos duchamos", "os ducháis", "se duchan"],
+      "indefinido": ["me duché", "te duchaste", "se duchó", "nos duchamos", "os duchasteis", "se ducharon"],
+      "perfecto": ["me he duchado", "te has duchado", "se ha duchado", "nos hemos duchado", "os habéis duchado", "se han duchado"],
+      "imperfecto": ["me duchaba", "te duchabas", "se duchaba", "nos duchábamos", "os duchabais", "se duchaban"],
+      "futuro": ["me ducharé", "te ducharás", "se duchará", "nos ducharemos", "os ducharéis", "se ducharán"],
+      "subjuntivo": ["me duche", "te duches", "se duche", "nos duchemos", "os duchéis", "se duchen"],
+      "imperativo": ["-", "dúchate", "dúchese", "duchémonos", "duchaos", "dúchense"]
+    },
+    "templates": [
+      { "tense": "presente", "subjectIdx": 2, "textEs": "Él siempre {slot} con agua caliente.", "textHe": "הוא תמיד מתקלח עם מים חמים." }
+    ]
+  },
+  {
+    "id": "gustar",
+    "infinitive": "gustar",
+    "hebrew": "למצוא חן (פועל הרגשה)",
+    "category": "gustar",
+    "categoryName": "מבנה הפוך (Verbo tipo Gustar)",
+    "conjugations": {
+      "presente": ["me gusta", "te gusta", "le gusta", "nos gusta", "os gusta", "les gusta"],
+      "indefinido": ["me gustó", "te gustó", "le gustó", "nos gustó", "os gustó", "les gustó"],
+      "perfecto": ["me ha gustado", "te ha gustado", "le ha gustado", "nos ha gustado", "os ha gustado", "les ha gustado"],
+      "imperfecto": ["me gustaba", "te gustaba", "le gustaba", "nos gustaba", "os gustaba", "les gustaba"],
+      "futuro": ["me gustará", "te gustará", "le gustará", "nos gustará", "os gustará", "les gustará"],
+      "subjuntivo": ["me guste", "te guste", "le guste", "nos guste", "os guste", "les guste"],
+      "imperativo": ["-", "-", "-", "-", "-", "-"]
+    },
+    "templates": [
+      { "tense": "presente", "subjectIdx": 0, "textEs": "A mí {slot} mucho viajar a países nuevos.", "textHe": "אני מאוד אוהב (מוצא חן בעיניי) לנסוע למדינות חדשות." },
+      { "tense": "presente", "subjectIdx": 3, "textEs": "A nosotros no {slot} el café sin azúcar.", "textHe": "אנחנו לא אוהבים קפה בלי סוכר." }
+    ]
+  },
+  {
+    "id": "venir",
+    "infinitive": "venir",
+    "hebrew": "לבוא",
+    "category": "irregular",
+    "categoryName": "פועל לא סדיר",
+    "conjugations": {
+      "presente": ["vengo", "vienes", "viene", "venimos", "venís", "vienen"],
+      "indefinido": ["vine", "viniste", "vino", "vinimos", "vinisteis", "vinieron"],
+      "perfecto": ["he venido", "has venido", "ha venido", "hemos venido", "habéis venido", "han venido"],
+      "imperfecto": ["venía", "venías", "venía", "veníamos", "veníais", "venían"],
+      "futuro": ["vendré", "vendrás", "vendrá", "vendremos", "vendréis", "vendrán"],
+      "subjuntivo": ["venga", "vengas", "venga", "vengamos", "vengáis", "vengan"],
+      "imperativo": ["-", "ven", "venga", "vengamos", "venid", "vengan"]
+    },
+    "templates": [
+      { "tense": "presente", "subjectIdx": 0, "textEs": "Yo {slot} a la clase todos los lunes.", "textHe": "אני בא לשיעור כל יום שני." },
+      { "tense": "subjuntivo", "subjectIdx": 1, "textEs": "Quiero que tú {slot} a mi fiesta mañana.", "textHe": "אני רוצה שתבוא למסיבה שלי מחר." }
+    ]
+  },
+  {
+    "id": "saber",
+    "infinitive": "saber",
+    "hebrew": "לדעת",
+    "category": "irregular",
+    "categoryName": "פועל לא סדיר",
+    "conjugations": {
+      "presente": ["sé", "sabes", "sabe", "sabemos", "sabéis", "saben"],
+      "indefinido": ["supe", "supiste", "supo", "supimos", "supisteis", "supieron"],
+      "perfecto": ["he sabido", "has sabido", "ha sabido", "hemos sabido", "habéis sabido", "han sabido"],
+      "imperfecto": ["sabía", "sabías", "sabía", "sabíamos", "sabíais", "sabían"],
+      "futuro": ["sabré", "sabrás", "sabrá", "sabremos", "sabréis", "sabrán"],
+      "subjuntivo": ["sepa", "sepas", "sepa", "sepamos", "sepáis", "sepan"],
+      "imperativo": ["-", "sabe", "sepa", "sepamos", "sabed", "sepan"]
+    },
+    "templates": [
+      { "tense": "presente", "subjectIdx": 0, "textEs": "Yo no {slot} la respuesta correcta.", "textHe": "אני לא יודע את התשובה הנכונה." },
+      { "tense": "indefinido", "subjectIdx": 2, "textEs": "Ayer Juan {slot} la verdad sobre el asunto.", "textHe": "אתמול חואן ידע/גילה את האמת על העניין." }
+    ]
+  },
+  {
+    "id": "poner",
+    "infinitive": "poner",
+    "hebrew": "לשים / להניח",
+    "category": "irregular",
+    "categoryName": "פועל לא סדיר",
+    "conjugations": {
+      "presente": ["pongo", "pones", "pone", "ponemos", "ponéis", "ponen"],
+      "indefinido": ["puse", "pusiste", "puso", "pusimos", "pusisteis", "pusieron"],
+      "perfecto": ["he puesto", "has puesto", "ha puesto", "hemos puesto", "habéis puesto", "han puesto"],
+      "imperfecto": ["ponía", "ponías", "ponía", "poníamos", "poníais", "ponían"],
+      "futuro": ["pondré", "pondrás", "pondrá", "pondremos", "pondréis", "pondrán"],
+      "subjuntivo": ["ponga", "pongas", "ponga", "pongamos", "pongáis", "pongan"],
+      "imperativo": ["-", "pon", "ponga", "pongamos", "poned", "pongan"]
+    },
+    "templates": [
+      { "tense": "presente", "subjectIdx": 0, "textEs": "Yo {slot} los libros sobre la mesa.", "textHe": "אני שם את הספרים על השולחן." },
+      { "tense": "imperativo", "subjectIdx": 1, "textEs": "¡{slot} la mesa para la cena, por favor!", "textHe": "ערוך/שים את השולחן לארוחת הערב, בבקשה!" }
+    ]
+  },
+  {
+    "id": "dormir",
+    "infinitive": "dormir",
+    "hebrew": "לישון",
+    "category": "irregular",
+    "categoryName": "שינוי תנועה (o->ue)",
+    "conjugations": {
+      "presente": ["duermo", "duermes", "duerme", "dormimos", "dormís", "duermen"],
+      "indefinido": ["dormí", "dormiste", "durmió", "dormimos", "dormisteis", "durmieron"],
+      "perfecto": ["he dormido", "has dormido", "ha dormido", "hemos dormido", "habéis dormido", "han dormido"],
+      "imperfecto": ["dormía", "dormías", "dormía", "dormíamos", "dormíais", "dormían"],
+      "futuro": ["dormiré", "dormirás", "dormirá", "dormiremos", "dormiréis", "dormirán"],
+      "subjuntivo": ["duerma", "duermas", "duerma", "dormamos", "dormáis", "duerman"],
+      "imperativo": ["-", "duerme", "duerma", "dormamos", "dormid", "duerman"]
+    },
+    "templates": [
+      { "tense": "presente", "subjectIdx": 0, "textEs": "Yo {slot} ocho horas todas las noches.", "textHe": "אני ישן שמונה שעות כל לילה." }
+    ]
+  },
+  {
+    "id": "escribir",
+    "infinitive": "escribir",
+    "hebrew": "לכתוב",
+    "category": "regular-ir",
+    "categoryName": "סדיר (עם בינוני פעול מיוחד)",
+    "conjugations": {
+      "presente": ["escribo", "escribes", "escribe", "escribimos", "escribís", "escriben"],
+      "indefinido": ["escribí", "escribiste", "escribió", "escribimos", "escribisteis", "escribieron"],
+      "perfecto": ["he escrito", "has escrito", "ha escrito", "hemos escrito", "habéis escrito", "han escrito"],
+      "imperfecto": ["escribía", "escribías", "escribía", "escribíamos", "escribíais", "escribían"],
+      "futuro": ["escribiré", "escribirás", "escribirá", "escribiremos", "escribiréis", "escribirán"],
+      "subjuntivo": ["escriba", "escribas", "escriba", "escribamos", "escribáis", "escriban"],
+      "imperativo": ["-", "escribe", "escriba", "escribamos", "escribid", "escriban"]
+    },
+    "templates": [
+      { "tense": "perfecto", "subjectIdx": 2, "textEs": "El autor ya {slot} un libro nuevo.", "textHe": "הסופר כבר כתב ספר חדש." }
+    ]
+  },
+  {
+    "id": "dar",
+    "infinitive": "dar",
+    "hebrew": "לתת",
+    "category": "irregular",
+    "categoryName": "פועל לא סדיר",
+    "conjugations": {
+      "presente": ["doy", "das", "da", "damos", "dais", "dan"],
+      "indefinido": ["di", "diste", "dio", "dimos", "disteis", "dieron"],
+      "perfecto": ["he dado", "has dado", "ha dado", "hemos dado", "habéis dado", "han dado"],
+      "imperfecto": ["daba", "dabas", "daba", "dábamos", "dabais", "daban"],
+      "futuro": ["daré", "darás", "dará", "daremos", "daréis", "darán"],
+      "subjuntivo": ["dé", "des", "dé", "demos", "deis", "den"],
+      "imperativo": ["-", "da", "dé", "demos", "dad", "den"]
+    },
+    "templates": [
+      { "tense": "presente", "subjectIdx": 0, "textEs": "Yo siempre te {slot} buenos consejos.", "textHe": "אני תמיד נותן לך עצות טובות." }
+    ]
+  },
+  {
+    "id": "ver",
+    "infinitive": "ver",
+    "hebrew": "לראות",
+    "category": "irregular",
+    "categoryName": "פועל לא סדיר",
+    "conjugations": {
+      "presente": ["veo", "ves", "ve", "vemos", "veis", "ven"],
+      "indefinido": ["vi", "viste", "vio", "vimos", "visteis", "vieron"],
+      "perfecto": ["he visto", "has visto", "ha visto", "hemos visto", "habéis visto", "han visto"],
+      "imperfecto": ["veía", "veías", "veía", "veíamos", "veíais", "veían"],
+      "futuro": ["veré", "verás", "verá", "veremos", "veréis", "verán"],
+      "subjuntivo": ["vea", "veas", "vea", "veamos", "veáis", "vean"],
+      "imperativo": ["-", "ve", "vea", "veamos", "ved", "vean"]
+    },
+    "templates": [
+      { "tense": "perfecto", "subjectIdx": 3, "textEs": "Nosotros ya {slot} esa película dos veces.", "textHe": "אנחנו כבר ראינו את הסרט הזה פעמיים." }
+    ]
+  },
+  {
+    "id": "llegar",
+    "infinitive": "llegar",
+    "hebrew": "להגיע",
+    "category": "regular-ar",
+    "categoryName": "סדיר (שינוי איות g->gu בעבר)",
+    "conjugations": {
+      "presente": ["llego", "llegas", "llega", "llegamos", "llegáis", "llegan"],
+      "indefinido": ["llegué", "llegaste", "llegó", "llegamos", "llegasteis", "llegaron"],
+      "perfecto": ["he llegado", "has llegado", "ha llegado", "hemos llegado", "habéis llegado", "han llegado"],
+      "imperfecto": ["llegaba", "llegabas", "llegaba", "llegábamos", "llegabais", "llegaban"],
+      "futuro": ["llegaré", "llegarás", "llegará", "llegaremos", "llegaréis", "llegarán"],
+      "subjuntivo": ["llegue", "llegues", "llegue", "lleguemos", "lleguéis", "lleguen"],
+      "imperativo": ["-", "llega", "llegue", "lleguemos", "llegad", "lleguen"]
+    },
+    "templates": [
+      { "tense": "indefinido", "subjectIdx": 0, "textEs": "Ayer yo {slot} tarde a la oficina.", "textHe": "אתמול הגעתי מאוחר למשרד." }
+    ]
+  },
+  {
+    "id": "creer",
+    "infinitive": "creer",
+    "hebrew": "להאמין / לחשוב",
+    "category": "regular-er",
+    "categoryName": "פועל סדיר (-er)",
+    "conjugations": {
+      "presente": ["creo", "crees", "cree", "creemos", "creéis", "creen"],
+      "indefinido": ["creí", "creíste", "creyó", "creímos", "creísteis", "creyeron"],
+      "perfecto": ["he creído", "has creído", "ha creído", "hemos creído", "habéis creído", "han creído"],
+      "imperfecto": ["creía", "creías", "creía", "creíamos", "creíais", "creían"],
+      "futuro": ["creeré", "creerás", "creerá", "creeremos", "creeréis", "creerán"],
+      "subjuntivo": ["crea", "creas", "crea", "creamos", "creáis", "crean"],
+      "imperativo": ["-", "cree", "crea", "creamos", "creed", "crean"]
+    },
+    "templates": [
+      { "tense": "presente", "subjectIdx": 0, "textEs": "Yo {slot} que tienes razón.", "textHe": "אני חושב/מאמין שאתה צודק." }
+    ]
+  }
+]
